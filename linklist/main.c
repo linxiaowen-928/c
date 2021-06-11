@@ -36,12 +36,9 @@ void add(List *pList,int number)
 void print(Node *p)
 {
 	int count = 1;
-	printf("%d\n",p->value);
-	do{
-		
-		printf("p%d->value=%d\n",count,p->value);
+	for (; p;p=p->next) {
+		printf("p%d->value=%d\t",count,p->value);
 		count++;
-		p=p->next;
-	}while(p->next);
-	printf("p%d->value=%d\n",count,p->value);
+	}
+	
 }
